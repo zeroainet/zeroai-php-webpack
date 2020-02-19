@@ -12,8 +12,9 @@
  *                 King 2019年11月18日上午11:18:04 修改
  *
  */
+require dirname(__DIR__) . '/vendor/autoload.php';
 define('APPLICATION_PATH', dirname(__DIR__) . '/application/');
-include_once (dirname(dirname(__DIR__)) . '/lib/tiny/src/Tiny.php');
+#include_once (dirname(dirname(__DIR__)) . '/lib/tiny/src/Tiny.php');
 
 \Tiny\Tiny::setENV([
     'RUNTIME_CACHE_ENABLE'=> TRUE,

@@ -1,0 +1,16 @@
+{
+    "name": "zeroainet/zeroai-php-demo",
+    "description": "a framework for php",
+    "type" : "project",
+    "author" : {
+    	"name" : "zeroai",
+    	"email" : "zeroainet@qq.com"
+    },
+    "require" : {
+     "zeroainet/zeroai-php" : "@dev"
+    },
+    "autoload":{
+    "psr-4" : { "\\App\\Controller\\":"application/controllers/web"}
+    },
+    "timeout" : 1000000
+}
