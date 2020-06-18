@@ -10,3 +10,4 @@ node_modules
 .eslintrc.js
 *.phar
 dist
+package-lock.json
