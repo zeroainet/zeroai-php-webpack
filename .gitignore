@@ -4,3 +4,9 @@
 .git
 .settings
 /vendor/
+webpack4-bootstrap4-demo
+node_modules
+.DS_Store
+.eslintrc.js
+*.phar
+dist

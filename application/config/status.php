@@ -1,5 +1,5 @@
-<?php 
+<?php
 return [
-    1 => "aaaa%s aaa %s"
+    'index' => "aaaa%s aaa %s"
 ];
 ?>

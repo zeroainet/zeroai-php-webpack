@@ -2,12 +2,36 @@
 namespace App\Controller\Console;
 
 
-class Main extends \Tiny\Mvc\Controller\ConsoleController
+class Main extends \ZeroAI\MVC\Controller\ConsoleController
 {
+    public function onstart()
+    {
+        echo "\nonstart\n";
+    }
+
+    public function onstop()
+    {
+        echo "\nonstop\n";
+    }
+
     public function indexAction()
     {
+        echo $this->config['status.index'];
         echo "aaaa";
         return;
+        //配置使用
+        $this->config;
+
+        //缓存使用
+        echo "------<br>";
+        $this->cache->set('a', "32342sfdds");
+        echo $this->cache['default']->get('a');
+
+        echo $this->cache->get('a'). "\n";    //使用缓存 默认使用id为default的缓存实例
+        echo $this->cache->default->get('a'). "\n";
+        echo $this->cache->default['a']. "\n";
+        echo "------<br>";
+
         //配置使用
         print_r($this->config['def.a.b']);
 
@@ -49,7 +73,7 @@ class Main extends \Tiny\Mvc\Controller\ConsoleController
         $this->cache['default']->get('a'); //使用指定id的缓存实例
 
         //模型使用
-        print_r($this->MainUserInfoModel->main());
+       // print_r($this->MainUserInfoModel->main());
 
         //JSON输出 int code 位于config.status
         //$this->outFormatJSON(1, "bbbb", "cccc",["aaa" => "aaaa"]);
